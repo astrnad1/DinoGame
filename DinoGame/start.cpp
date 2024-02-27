@@ -2,7 +2,7 @@
 #define START_H
 
 #include <raylib.h>
-#include "dino.cpp"
+#include "start_dino.cpp"
 
 class Start {
 

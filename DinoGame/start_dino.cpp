@@ -31,7 +31,7 @@ public:
 		}
 	}
 
-	void draw_start_dino(const int windowWidth, const int windowHeight)
+	void DrawDino(const int windowWidth, const int windowHeight)
 	{
 		timer -= GetFrameTime();
 
@@ -46,12 +46,12 @@ public:
 		DrawTexture(texApp[cur_app_count], xPos, yPos, WHITE);
 	}
 
-	void draw_game_dino(const int windowWidth, const int windowHeight)
+	/*void draw_game_dino(const int windowWidth, const int windowHeight)
 	{
 		int xPos = 100;
 		int yPos = windowHeight - 200;
 		DrawTexture(texApp[1], xPos, yPos, WHITE);
-	}
+	}*/
 };
 
 #endif

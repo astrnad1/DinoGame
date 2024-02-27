@@ -2,7 +2,7 @@
 #define GAME_H
 
 #include <raylib.h>
-#include "dino.cpp"
+#include "game_dino.cpp"
 
 class Game {
 
