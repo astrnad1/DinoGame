@@ -8,6 +8,7 @@ class Game {
 
 private:
 	GameDino dino;
+	float speed = 5.0f;
 
 public:
 	void Draw(const int windowWidth, const int windowHeight)
@@ -17,7 +18,7 @@ public:
 
 	void Update()
 	{
-		
+		dino.Update();
 	}
 };
 
