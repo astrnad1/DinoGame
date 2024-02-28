@@ -7,12 +7,12 @@
 class Game {
 
 private:
-	Dino dino;
+	GameDino dino;
 
 public:
 	void Draw(const int windowWidth, const int windowHeight)
 	{
-		dino.draw_game_dino(windowWidth, windowHeight);
+		dino.Draw(windowWidth, windowHeight);
 	}
 
 	void Update()

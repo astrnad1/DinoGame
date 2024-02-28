@@ -9,7 +9,7 @@ class Start {
 private:
 	Music music;
 	const char* text = "Press SPACE to Start";
-	Dino dino;
+	StartDino dino;
 	float musicVolume = 0.15f;
 
 public:
@@ -33,7 +33,7 @@ public:
 		DrawText(text, xPos, yPos, 20, GRAY);
 
 		// Drawing the Dino
-		dino.draw_start_dino(windowWidth, windowHeight);
+		dino.Draw(windowWidth, windowHeight);
 	}
 
 	void Update()

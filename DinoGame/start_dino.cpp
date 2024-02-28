@@ -3,7 +3,7 @@
 
 #include <raylib.h>
 
-class Dino {
+class StartDino {
 
 private:
 	const unsigned int app_count = 2; // Appearance count
@@ -13,7 +13,7 @@ private:
 	int cur_app_count = 0; // Current Dino appearance count
 
 public:
-	Dino() {
+	StartDino() {
 		// Figure images
 		imgApp[0] = LoadImage("images/dino0.png");
 		imgApp[1] = LoadImage("images/dino1.png");
@@ -22,7 +22,7 @@ public:
 		texApp[1] = LoadTextureFromImage(imgApp[1]);
 	}
 
-	~Dino()
+	~StartDino()
 	{
 		for (unsigned int i = 0; i < app_count; i++)
 		{
@@ -31,7 +31,7 @@ public:
 		}
 	}
 
-	void DrawDino(const int windowWidth, const int windowHeight)
+	void Draw(const int windowWidth, const int windowHeight)
 	{
 		timer -= GetFrameTime();
 
@@ -46,12 +46,6 @@ public:
 		DrawTexture(texApp[cur_app_count], xPos, yPos, WHITE);
 	}
 
-	/*void draw_game_dino(const int windowWidth, const int windowHeight)
-	{
-		int xPos = 100;
-		int yPos = windowHeight - 200;
-		DrawTexture(texApp[1], xPos, yPos, WHITE);
-	}*/
 };
 
 #endif
