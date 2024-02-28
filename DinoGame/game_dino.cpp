@@ -1,3 +1,6 @@
+#ifndef GAME_DINO_H
+#define GAME_DINO_H
+
 #include <raylib.h>
 
 class GameDino
@@ -5,26 +8,28 @@ class GameDino
 
 private:
 	const int app_count = 1;
-	Image imgApp[1];
-	Texture texApp[1];
+	Texture2D texApp[1];
 
 public:
 	GameDino()
 	{
-		imgApp[0] = LoadImage("images/dino1.png");
-		texApp[0] = LoadTextureFromImage(imgApp[0]);
+		texApp[0] = LoadTexture("images/dino1.png");
 	}
 
 	~GameDino()
 	{
 		for (int i = 0; i < app_count; i++)
 		{
-			UnloadImage(imgApp[i]);
 			UnloadTexture(texApp[i]);
 		}
 	}
 
-	void Draw(const int windowWidth, const int windowHeight)
+	void Update()
+	{
+
+	}
+
+	void Draw(const int windowWidth, const int windowHeight/*, float speed*/)
 	{
 		int xPos = 100;
 		int yPos = windowHeight - 200;
@@ -32,3 +37,5 @@ public:
 	}
 
 };
+
+#endif

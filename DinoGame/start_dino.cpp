@@ -1,5 +1,5 @@
-#ifndef DINO_H
-#define DINO_H
+#ifndef START_DINO_H
+#define START_DINO_H
 
 #include <raylib.h>
 
@@ -7,26 +7,21 @@ class StartDino {
 
 private:
 	const unsigned int app_count = 2; // Appearance count
-	Image imgApp[2];
-	Texture texApp[2];
+	Texture2D texApp[2];
 	float timer = 1.0f;
 	int cur_app_count = 0; // Current Dino appearance count
 
 public:
 	StartDino() {
-		// Figure images
-		imgApp[0] = LoadImage("images/dino0.png");
-		imgApp[1] = LoadImage("images/dino1.png");
 		// Figure textures
-		texApp[0] = LoadTextureFromImage(imgApp[0]);
-		texApp[1] = LoadTextureFromImage(imgApp[1]);
+		texApp[0] = LoadTexture("images/dino0.png");
+		texApp[1] = LoadTexture("images/dino1.png");
 	}
 
 	~StartDino()
 	{
 		for (unsigned int i = 0; i < app_count; i++)
 		{
-			UnloadImage(imgApp[i]);
 			UnloadTexture(texApp[i]);
 		}
 	}
