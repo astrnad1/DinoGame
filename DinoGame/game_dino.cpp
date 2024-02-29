@@ -11,12 +11,14 @@ private:
 	Texture2D texApp[1];
 	Vector2 position;
 	float speed = 5.0f;
+	bool isJumping;
 
 public:
 	GameDino()
 	{
 		texApp[0] = LoadTexture("images/dino1.png");
 		position = { 100, 300 }; // Start position
+		isJumping = false;
 	}
 
 	~GameDino()
@@ -27,7 +29,7 @@ public:
 		}
 	}
 
-	void Draw(const int windowWidth, const int windowHeight/*, float speed*/)
+	void Draw(const int windowWidth, const int windowHeight)
 	{
 		DrawTexture(texApp[0], position.x, position.y, WHITE);
 	}
@@ -42,6 +44,7 @@ public:
 			position.y += speed;
 		if (IsKeyDown(KEY_W))
 			position.y -= speed;
+
 	}
 };
 
