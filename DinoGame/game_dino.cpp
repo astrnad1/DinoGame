@@ -12,6 +12,7 @@ private:
 	Vector2 position;
 	float speed = 5.0f;
 	bool isJumping;
+	float scaleFactor = 0.8f;
 
 public:
 	GameDino()
@@ -31,7 +32,7 @@ public:
 
 	void Draw(const int windowWidth, const int windowHeight)
 	{
-		DrawTexture(texApp[0], position.x, position.y, WHITE);
+		DrawTextureEx(texApp[0], position, 0.0f, scaleFactor, WHITE);
 	}
 
 	void Update()
@@ -44,7 +45,6 @@ public:
 			position.y += speed;
 		if (IsKeyDown(KEY_W))
 			position.y -= speed;
-
 	}
 };
 
