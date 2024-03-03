@@ -19,8 +19,8 @@ private:
 		meteorBox = meteor.GetBoundingBox();
 
 		// Collisions boxes
-		//DrawRectangle(dinoBox.x, dinoBox.y, dinoBox.width, dinoBox.height, GREEN);
-		//DrawRectangle(meteorBox.x, meteorBox.y, meteorBox.width, meteorBox.height, RED);
+		//DrawRectangleLines(dinoBox.x, dinoBox.y, dinoBox.width, dinoBox.height, GREEN);
+		//DrawRectangleLines(meteorBox.x, meteorBox.y, meteorBox.width, meteorBox.height, RED);
 
 		if (CheckCollisionRecs(dinoBox, meteorBox))
 		{
