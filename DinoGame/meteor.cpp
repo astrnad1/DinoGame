@@ -10,12 +10,18 @@ private:
 	Vector2 position;
 	float scaleFactor = 0.3f;
 	float speed = 5.0f;
+	float meteorWidth;
+	float meteorHeight;
 
 public:
 	Meteor()
 	{
 		texture = LoadTexture("images/meteor.png");
-		position = { 800, 300 };
+		position = { 800, 330 };
+
+		// Need that for the collisions
+		meteorWidth = ((float)texture.width) * scaleFactor;
+		meteorHeight = ((float)texture.height) * scaleFactor;
 	}
 
 	~Meteor()
@@ -34,7 +40,12 @@ public:
 			position.x = 1050;
 		else
 			position.x -= speed;
+		
+	}
 
+	Rectangle GetBoundingBox() const
+	{
+		return { position.x, position.y, meteorWidth, meteorHeight };
 	}
 };
 

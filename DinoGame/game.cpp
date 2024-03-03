@@ -3,12 +3,32 @@
 
 #include "game_dino.cpp"
 #include "meteor.cpp"
+#include <iostream>
 
 class Game {
 
 private:
 	GameDino dino;
 	Meteor meteor;
+	Rectangle dinoBox;
+	Rectangle meteorBox;
+
+	bool CheckCollision()
+	{
+		dinoBox = dino.GetBoundingBox();
+		meteorBox = meteor.GetBoundingBox();
+
+		// Collisions boxes
+		//DrawRectangle(dinoBox.x, dinoBox.y, dinoBox.width, dinoBox.height, GREEN);
+		//DrawRectangle(meteorBox.x, meteorBox.y, meteorBox.width, meteorBox.height, RED);
+
+		if (CheckCollisionRecs(dinoBox, meteorBox))
+		{
+			return true;
+		}
+
+		return false;
+	}
 
 public:
 	void Draw(const int windowWidth, const int windowHeight)
@@ -21,6 +41,11 @@ public:
 	{
 		dino.Update();
 		meteor.Update();
+
+		if (CheckCollision())
+		{
+			std::cout << "Collision!" << std::endl;
+		}
 	}
 };
 

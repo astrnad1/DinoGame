@@ -15,6 +15,8 @@ private:
 	float scaleFactor = 0.8f;
 	float jumpSpeed = 10.0f;
 	float gravity = 0.5f;
+	float dinoWidth;
+	float dinoHeight;
 
 public:
 	GameDino()
@@ -22,6 +24,10 @@ public:
 		texture[0] = LoadTexture("images/dino1.png");
 		position = { 100, 300 }; // Start position
 		isJumping = false;
+
+		// Need that for the collisions
+		dinoWidth = ((float)texture[0].width) * scaleFactor * 0.8;
+		dinoHeight = ((float)texture[0].height) * scaleFactor;
 	}
 
 	~GameDino()
@@ -55,6 +61,11 @@ public:
 			if (IsKeyPressed(KEY_SPACE) || IsKeyPressed(KEY_W) || IsKeyPressed(KEY_UP))
 				isJumping = true;
 		}
+	}
+
+	Rectangle GetBoundingBox() const
+	{
+		return { position.x, position.y, dinoWidth, dinoHeight };
 	}
 };
 

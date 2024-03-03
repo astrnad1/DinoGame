@@ -6,6 +6,9 @@ using namespace std;
 
 int main()
 {
+
+	// Collisions ne delajo vreju, meteor box je prevlki
+
 	const int windowWidth = 1000;
 	const int windowHeight = 500;
 	const int FPS = 60;
