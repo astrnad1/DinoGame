@@ -7,7 +7,7 @@ class Controller {
 private:
     Start start;
     Game game;
-    enum State { START, GAME } state;
+    enum State { START, GAME , END} state;
 
 public:
     Controller() : state(START) {}
