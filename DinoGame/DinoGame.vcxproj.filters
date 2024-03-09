@@ -36,5 +36,8 @@
     <ClCompile Include="meteor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="end.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

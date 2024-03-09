@@ -47,6 +47,11 @@ public:
 	{
 		return { position.x, position.y, meteorWidth, meteorHeight };
 	}
+
+	void ResetPos()
+	{
+		position = { 800, 330 };
+	}
 };
 
 #endif

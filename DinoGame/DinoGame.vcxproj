@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="controller.cpp" />
+    <ClCompile Include="end.cpp" />
     <ClCompile Include="game_dino.cpp" />
     <ClCompile Include="meteor.cpp" />
     <ClCompile Include="start_dino.cpp" />

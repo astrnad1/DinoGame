@@ -1,13 +1,15 @@
 #include <raylib.h>
 #include "start.cpp"
 #include "game.cpp"
+#include "end.cpp"
 
 class Controller {
 
 private:
     Start start;
     Game game;
-    enum State { START, GAME , END} state;
+    EndScreen endScreen;
+    enum State { START, GAME , END } state;
 
 public:
     Controller() : state(START) {}
@@ -20,6 +22,9 @@ public:
             break;
         case GAME:
             game.Draw(windowWidth, windowHeight);
+            break;
+        case END:
+            endScreen.Draw(windowWidth, windowHeight);
             break;
         }
     }
@@ -35,6 +40,15 @@ public:
             break;
         case GAME:
             game.Update();
+            if (game.CheckCollision())
+                state = END;
+            break;
+        case END:
+            if (IsKeyPressed(KEY_SPACE)) {
+                game.meteor.ResetPos();
+                game.dino.ResetPos();
+                state = GAME;
+            }
             break;
         }
     }

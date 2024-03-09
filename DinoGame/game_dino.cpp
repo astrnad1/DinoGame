@@ -67,6 +67,11 @@ public:
 	{
 		return { position.x, position.y, dinoWidth, dinoHeight };
 	}
+
+	void ResetPos()
+	{
+		position = { 100, 300 };
+	}
 };
 
 #endif

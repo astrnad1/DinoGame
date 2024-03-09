@@ -8,10 +8,12 @@
 class Game {
 
 private:
-	GameDino dino;
-	Meteor meteor;
 	Rectangle dinoBox;
 	Rectangle meteorBox;
+
+public:
+	GameDino dino;
+	Meteor meteor;
 
 	bool CheckCollision()
 	{
@@ -30,7 +32,6 @@ private:
 		return false;
 	}
 
-public:
 	void Draw(const int windowWidth, const int windowHeight)
 	{
 		dino.Draw(windowWidth, windowHeight);
@@ -41,11 +42,6 @@ public:
 	{
 		dino.Update();
 		meteor.Update();
-
-		if (CheckCollision())
-		{
-			std::cout << "Collision!" << std::endl;
-		}
 	}
 };
 
