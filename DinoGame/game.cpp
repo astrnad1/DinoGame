@@ -4,6 +4,7 @@
 #include "game_dino.cpp"
 #include "meteor.cpp"
 #include <iostream>
+#include <string>
 
 class Game {
 
@@ -14,6 +15,7 @@ private:
 public:
 	GameDino dino;
 	Meteor meteor;
+	float score = 0;
 
 	bool CheckCollision()
 	{
@@ -26,7 +28,12 @@ public:
 
 		if (CheckCollisionRecs(dinoBox, meteorBox))
 		{
+			dino.ResetPos();
+			meteor.ResetPos();
 			return true;
+		}
+		else {
+			score += 0.5f;
 		}
 
 		return false;
@@ -36,6 +43,7 @@ public:
 	{
 		dino.Draw(windowWidth, windowHeight);
 		meteor.Draw(windowWidth, windowHeight);
+		DrawText(("SCORE: " + std::to_string((int)score)).c_str(), 800, 50, 20, GRAY);
 	}
 
 	void Update()

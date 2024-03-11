@@ -1,11 +1,11 @@
-#include <iostream>
-#include "raylib.h"
+#include <raylib.h>
 #include "controller.cpp"
 
 using namespace std;
 
 int main()
 {
+	// Score na end screen ne dela!!
 
 	const int windowWidth = 1000;
 	const int windowHeight = 500;

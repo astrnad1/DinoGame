@@ -45,8 +45,7 @@ public:
             break;
         case END:
             if (IsKeyPressed(KEY_SPACE)) {
-                game.meteor.ResetPos();
-                game.dino.ResetPos();
+                game.score = 0;
                 state = GAME;
             }
             break;
