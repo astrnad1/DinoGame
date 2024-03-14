@@ -1,8 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "game_dino.cpp"
-#include "meteor.cpp"
+#include "game_objects.cpp"
 #include <iostream>
 #include <string>
 

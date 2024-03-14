@@ -30,10 +30,7 @@
     <ClCompile Include="start.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="game_dino.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="meteor.cpp">
+    <ClCompile Include="game_objects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="end.cpp">
