@@ -14,8 +14,8 @@ private:
 public:
 	StartDino() {
 		// Figure textures
-		texApp[0] = LoadTexture("images/dino0.png");
-		texApp[1] = LoadTexture("images/dino1.png");
+		texApp[0] = LoadTexture("res/images/dino0.png");
+		texApp[1] = LoadTexture("res/images/dino1.png");
 	}
 
 	~StartDino()

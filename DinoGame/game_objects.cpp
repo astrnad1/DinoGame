@@ -23,7 +23,7 @@ private:
 public:
 	GameDino()
 	{
-		texture[0] = LoadTexture("images/dino1.png");
+		texture[0] = LoadTexture("res/images/dino1.png");
 		position = { 100, 300 }; // Start position
 		isJumping = false;
 
@@ -91,7 +91,7 @@ private:
 public:
 	Meteor()
 	{
-		texture = LoadTexture("images/meteor.png");
+		texture = LoadTexture("res/images/meteor.png");
 		position = { 800, 330 };
 
 		// Need that for the collisions

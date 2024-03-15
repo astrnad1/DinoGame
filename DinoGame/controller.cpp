@@ -24,7 +24,7 @@ public:
             game.Draw(windowWidth, windowHeight);
             break;
         case END:
-            endScreen.Draw(windowWidth, windowHeight);
+            endScreen.Draw(windowWidth, windowHeight, game.score);
             break;
         }
     }

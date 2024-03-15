@@ -14,7 +14,7 @@ private:
 
 public:
 	Start() {
-		music = LoadMusicStream("sounds/background_start.mp3");
+		music = LoadMusicStream("res/sounds/background_start.mp3");
 		PlayMusicStream(music);
 	}
 
